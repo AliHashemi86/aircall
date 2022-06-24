@@ -25,13 +25,13 @@
 
 .buttons {
   display: flex;
-  justify-content: right;
+  justify-content: space-between;
   flex-direction: row;
 }
 
 #inbox {
   display: flex;
-  border-color: rgb(0, 216, 72);
+  border-color: rgb(105, 206, 139);
   border-style: solid;
   border-radius: 5px;
   padding: 0.4em 0.9em;
@@ -43,9 +43,24 @@
   margin: 0.2em;
 }
 
+
 #all {
   display: flex;
-  border-color: rgb(0, 216, 72);
+  border-color: rgb(105, 206, 139);
+  border-style: solid;
+  border-radius: 5px;
+  padding: 0.4em 0.9em;
+  font-size: 1.3em;
+  font-weight: bold;
+  max-width: 80%;
+  justify-content: center;
+  flex-direction: row;
+  margin: 0.2em;
+}
+
+#archive {
+  display: flex;
+  border-color: rgb(105, 206, 139);
   border-style: solid;
   border-radius: 5px;
   padding: 0.4em 0.9em;

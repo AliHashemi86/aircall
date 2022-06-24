@@ -4,7 +4,7 @@ import "../css/activityDetail.css";
 const url = "https://aircall-job.herokuapp.com/activities/";
 
 export default function ActivityDetail() {
-  const [activityDetail, setActivityDetail] = useState(null);
+  const [activityDetail, setActivityDetail] = useState([]);
 
   const { id } = useParams();
 
@@ -34,6 +34,20 @@ export default function ActivityDetail() {
 
   const [isArchived, setIsArchived] = useState(false);
 
+  const date = new Date(activityDetail.created_at);
+  const newDate = date.toLocaleString("en-GB", {
+    day: "2-digit",
+    month: "long",
+    year: "numeric",
+  });
+
+  const time = new Date(activityDetail.created_at);
+  const newTime = time.toLocaleString("en-US", {
+    hour: "numeric",
+    minute: "numeric",
+    hour12: true,
+  });
+
   return (
     <div className="detail">
       {activityDetail && (
@@ -43,8 +57,12 @@ export default function ActivityDetail() {
             {activityDetail.id}
           </p>
           <p>
-            <b>Date / Time: </b>
-            {activityDetail.created_at}
+            <b>Date: </b>
+            {newDate}
+          </p>
+          <p>
+            <b>Time: </b>
+            {newTime}
           </p>
           <p>
             <b>Call Direction: </b>

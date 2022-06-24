@@ -1,22 +1,22 @@
 .detail {
   display: flex;
   border-color: rgb(201, 201, 201);
-  border-style: solid ;
+  border-style: solid;
   border-radius: 5px;
   align-items: left;
   padding: 0.5em;
   font-size: 1.3em;
   flex-direction: column;
-  margin: 1.7em;
+  margin: 2em 1em;
 }
 
 .button {
   display: flex;
-  border-color: rgb(0, 216, 72);
-  border-style: solid ;
+  border-color: rgb(105, 206, 139);
+  border-style: solid;
   border-radius: 5px;
   padding: 0.5em;
   font-size: 1.1em;
   font-weight: bold;
-  max-width: 45%;
+  max-width: 43%;
 }
